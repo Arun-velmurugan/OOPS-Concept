@@ -1,20 +1,22 @@
-import java.util.Scanner;
-class Student
-{
-	String name;
-	int rollNo;
-	int marks;
-	
-	public static void main(String[] args)
-	{
-		Scanner sc = new Scanner(System.in);
-		Student s1 = new Student();
-		s1.name = sc.nextLine();
-		s1.rollNo = sc.nextInt();
-		s1.marks = sc.nextInt();
-		
-		System.out.print(s1.name+" ");
-		System.out.print(s1.rollNo+" ");
-		System.out.print(s1.marks);
-	}
+
+package homework;
+
+
+public class Student extends Person1{
+    int rollNo;
+    int marks;
+    
+    Student(String name,int age,int rollNo,int marks)
+    {
+        super(name,age);
+        this.rollNo=rollNo;
+        this.marks=marks;
+    }
+    
+    void display()
+    {
+        super.display();
+        System.out.println("Roll NO: "+rollNo);
+        System.out.println("Marks: "+marks);
+    }
 }
